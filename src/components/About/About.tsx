@@ -4,29 +4,29 @@ import {motion} from 'framer-motion';
 import {fadeIn} from '../../helpers/fadeIn';
 import {motionLowerViewortProps} from '../../helpers/motion';
 
-interface DynamicNumberCountProps {
-  isInView: boolean;
+interface HighlightProps {
+  content: string;
   value: number;
-  additionalValue?: string;
-  children: React.ReactNode;
+  additionalString?: string;
 }
 
-const DynamicNumberCount = ({
-  isInView,
-  value,
-  additionalValue,
-  children,
-}: DynamicNumberCountProps) => {
-  return (
-    <div>
+const highlights: HighlightProps[] = [
+  {content: 'Years of experience', value: 13},
+  {content: 'Projects Completed', value: 15, additionalString: 'k+'},
+  {content: 'Satisfied Clients', value: 12, additionalString: 'k+'},
+];
+
+const renderHighlights = (highlights: HighlightProps[], isInView: boolean): JSX.Element[] => {
+  return highlights.map(({content, value, additionalString}, key) => (
+    <div key={key}>
       <div className='text-[40px] font-tertiary text-gradient mb-2 pt-2'>
         {isInView ? <CountUp start={0} end={value} duration={3} /> : null}
-        {additionalValue}
+        {additionalString}
       </div>
 
-      <div className='font-primary text-sm tracking-[2px]'>{children}</div>
+      <div className='font-primary text-sm tracking-[2px]'>{content}</div>
     </div>
-  );
+  ));
 };
 
 const About = (): JSX.Element => {
@@ -61,20 +61,7 @@ const About = (): JSX.Element => {
             </p>
 
             <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
-              <DynamicNumberCount isInView={inView} value={13}>
-                Years of <br />
-                experience
-              </DynamicNumberCount>
-
-              <DynamicNumberCount isInView={inView} value={15} additionalValue='k+'>
-                Projects <br />
-                Completed
-              </DynamicNumberCount>
-
-              <DynamicNumberCount isInView={inView} value={12} additionalValue='k+'>
-                Satisfied <br />
-                Clients
-              </DynamicNumberCount>
+              {renderHighlights(highlights, inView)}
             </div>
 
             <div className='flex gap-x-8 items-center'>
