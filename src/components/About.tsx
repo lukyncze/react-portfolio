@@ -1,8 +1,9 @@
 import CountUp from 'react-countup';
 import {useInView} from 'react-intersection-observer';
 import {motion} from 'framer-motion';
-import {fadeIn} from '../../helpers/fadeIn';
-import {motionLowerViewortProps} from '../../helpers/motion';
+import {fadeIn} from '../helpers/fadeIn';
+import {motionLowerViewortProps} from '../helpers/motion';
+import Container from '../common/Container';
 
 interface HighlightProps {
   content: string;
@@ -36,7 +37,7 @@ const About = (): JSX.Element => {
 
   return (
     <section className='section' id='about' ref={ref}>
-      <div className='container mx-auto'>
+      <Container>
         <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen'>
           <motion.div
             className='flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'
@@ -73,7 +74,7 @@ const About = (): JSX.Element => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

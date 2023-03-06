@@ -1,10 +1,10 @@
-import Banner from './components/Banner/Banner';
-import Header from './components/Header/Header';
-import Nav from './components/Nav/Nav';
-import About from './components/About/About';
-import Services from './components/Services/Services';
-import Work from './components/Work/Work';
-import Contact from './components/Contact/Contact';
+import Banner from './components/Banner';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import About from './components/About';
+import Services from './components/Services';
+import Work from './components/Work';
+import Contact from './components/Contact';
 
 const App = (): JSX.Element => {
   return (
