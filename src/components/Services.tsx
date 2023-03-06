@@ -1,7 +1,8 @@
 import {BsArrowUpRight} from 'react-icons/bs';
 import {motion} from 'framer-motion';
-import {fadeIn} from '../../helpers/fadeIn';
-import {motionLowerViewortProps} from '../../helpers/motion';
+import {fadeIn} from '../helpers/fadeIn';
+import {motionLowerViewortProps} from '../helpers/motion';
+import Container from '../common/Container';
 
 interface Service {
   name: string;
@@ -61,7 +62,7 @@ const renderServices = (services: Service[]) => {
 const Services = (): JSX.Element => {
   return (
     <div className='section' id='services'>
-      <div className='container mx-auto'>
+      <Container>
         <div className='flex flex-col lg:flex-row'>
           <motion.div
             className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'
@@ -81,7 +82,7 @@ const Services = (): JSX.Element => {
             {renderServices(services)}
           </motion.div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

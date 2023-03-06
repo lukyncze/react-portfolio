@@ -1,17 +1,20 @@
 import {motion} from 'framer-motion';
-import {fadeIn} from '../../helpers/fadeIn';
-import Img1 from '../../assets/portfolio-img1.png';
-import Img2 from '../../assets/portfolio-img2.png';
-import Img3 from '../../assets/portfolio-img3.png';
-import {motionLowerViewortProps} from '../../helpers/motion';
+import {fadeIn} from '../helpers/fadeIn';
+import Img1 from '../assets/portfolio-img1.png';
+import Img2 from '../assets/portfolio-img2.png';
+import Img3 from '../assets/portfolio-img3.png';
+import {motionLowerViewortProps} from '../helpers/motion';
+import Container from '../common/Container';
+
+interface ImageProps {
+  src: string;
+  alt: string;
+}
 
 interface ProjectProps {
   title: string;
   category: string;
-  image: {
-    src: string;
-    alt: string;
-  };
+  image: ImageProps;
 }
 
 const Project = ({title, category, image}: ProjectProps): JSX.Element => (
@@ -33,7 +36,7 @@ const Project = ({title, category, image}: ProjectProps): JSX.Element => (
 const Work = (): JSX.Element => {
   return (
     <div className='section' id='work'>
-      <div className='container mx-auto'>
+      <Container>
         <div className='flex flex-col lg:flex-row gap-x-10'>
           <motion.div
             className='flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0'
@@ -79,7 +82,7 @@ const Work = (): JSX.Element => {
             />
           </motion.div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

@@ -1,11 +1,12 @@
 import {motion} from 'framer-motion';
-import {motionLowerViewortProps} from '../../helpers/motion';
-import {fadeIn} from '../../helpers/fadeIn';
+import {motionLowerViewortProps} from '../helpers/motion';
+import {fadeIn} from '../helpers/fadeIn';
+import Container from '../common/Container';
 
 const Contact = (): JSX.Element => {
   return (
     <section className='py-16 lg:section' id='contact'>
-      <div className='container mx-auto'>
+      <Container>
         <div className='flex flex-col lg:flex-row'>
           <motion.div
             className='flex-1 flex justify-start items-center'
@@ -48,7 +49,7 @@ const Contact = (): JSX.Element => {
             <button className='btn btn-lg'>Send message</button>
           </motion.form>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
