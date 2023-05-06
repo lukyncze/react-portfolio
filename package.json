@@ -9,27 +9,27 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "framer-motion": "~10.1.0",
+    "framer-motion": "~10.12.8",
     "react": "~18.2.0",
-    "react-countup": "~6.4.1",
+    "react-countup": "~6.4.2",
     "react-dom": "~18.2.0",
     "react-icons": "~4.8.0",
     "react-intersection-observer": "~9.4.3",
     "react-scroll": "~1.8.9",
-    "react-type-animation": "~2.1.2"
+    "react-type-animation": "~3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "~7.21.0",
-    "@types/react": "~18.0.28",
-    "@types/react-dom": "~18.0.11",
-    "@types/react-scroll": "~1.8.6",
-    "@vitejs/plugin-react": "~3.1.0",
-    "autoprefixer": "~10.4.13",
-    "postcss": "~8.4.21",
+    "@babel/core": "~7.21.8",
+    "@types/react": "~18.2.6",
+    "@types/react-dom": "~18.2.4",
+    "@types/react-scroll": "~1.8.7",
+    "@vitejs/plugin-react": "~4.0.0",
+    "autoprefixer": "~10.4.14",
+    "postcss": "~8.4.23",
     "prop-types": "~15.8.1",
-    "tailwindcss": "~3.2.7",
-    "typescript": "~4.9.5",
-    "vite": "~4.1.4"
+    "tailwindcss": "~3.3.2",
+    "typescript": "~5.0.4",
+    "vite": "~4.3.5"
   }
 }
 
